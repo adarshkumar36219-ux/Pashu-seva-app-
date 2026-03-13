@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pashu Seva Kendra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="bg-gray-100 pb-20">
+
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-md">
+        <h1 class="text-xl font-bold">पशु सेवा केंद्र 🐄</h1>
+        <span>🛒(0)</span>
+    </header>
+
+    <div id="product-grid" class="p-4 grid grid-cols-2 gap-4">
+        </div>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="fixed bottom-20 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl">
+        📞 सलाह लें
+    </a>
+
+    <nav class="fixed bottom-0 w-full bg-white border-t p-4 flex justify-around text-blue-600 font-bold">
+        <span>🏠 होम</span>
+        <span>📦 ऑर्डर्स</span>
+        <span>👤 प्रोफाइल</span>
+    </nav>
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
