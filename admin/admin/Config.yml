@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images"
+public_folder: "images"
+collections:
+  - name: "medicines"
+    label: "दवाइयां"
+    folder: "data"
+    create: true
+    fields:
+      - {label: "नाम", name: "title", widget: "string"}
+      - {label: "कीमत", name: "price", widget: "number"}
+      - {label: "फोटो", name: "image", widget: "image"}
